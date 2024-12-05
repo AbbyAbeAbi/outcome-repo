@@ -1,0 +1,92 @@
+:root {
+    --primary-color-blue: hsl(203, 100%, 13%);
+    --primary-color-green: hsl(85, 88%, 43%);
+    --secondary-color-black: hsl(60, 3%, 6%);
+    --secondary-color-white: hsl(0, 0%, 100%);
+    --red: hsl(0, 100%, 50%);
+    --fs-64: 4rem;
+    --fs-18: 1.125rem;
+    --fs-24: 1.5rem;
+    --fs-20: 1.25rem;
+    --fs-32: 2rem;
+    --fs-37: 2.375rem;
+    --fs-50: 3.125rem;
+    --fs-25: 1.5625rem;
+    --fs-65: 4.0625rem;
+    --fs-22: 1.375rem;
+    --container-width: 69.375rem;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    font-size: var(--fs-18);
+}
+
+.wrapper {
+    width: calc(100% - 2rem);
+    max-width: var(--container-width);
+    margin-inline: auto;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    gap: 1.5rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--primary-color-blue);
+    font-size: var(--fs-18);
+    font-family:  "DM Sans", sans-serif;
+    font-weight: 500;
+}
+
+
+/* tablet */
+@media (min-width: 37.5em) {
+
+    /* 600px */
+    .wrapper {
+        width: calc(100% - 2rem);
+    }
+}
+
+@media (max-width: 23.4em) {
+
+    .menu {
+        display: none;
+    }
+}
+
+
+
+
+
+
+/* HEADER */
