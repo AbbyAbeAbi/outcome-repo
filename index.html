@@ -19,9 +19,17 @@
     <header class="header">
         <nav>
             <div class="wrapper">
-                <div class="main-nav">
-                    <a href="#" class="outcome__logo"><img src="assets/images/outcome_logo.png" class="logo" width="80"
-                            height="80" alt="logo"></a>
+                <div class="nav_container">
+                    <div class="main-nav">
+                        <a href="#" class="outcome__logo"><img src="assets/images/outcome_logo.png" class="logo" width="80"
+                                height="80" alt="logo"></a>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </div>
                     <ul class="menu">
                         <li><a href="#">HOME</a></li>
                         <li><a href="#">WHAT WE DO</a></li>
@@ -29,6 +37,7 @@
                         <li><a href="#">LET'S TALK</a></li>
                     </ul>
                 </div>
+                
             </div>
         </nav>
     </header>
@@ -49,3 +58,15 @@
 </body>
 
 </html>
+
+<script>
+
+    // create event listener for the hamburger menu
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+// if hamburger is clicked, toggle the menu
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+    
+</script>

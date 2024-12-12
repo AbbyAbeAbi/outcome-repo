@@ -41,6 +41,19 @@ body {
     margin-inline: auto;
 }
 
+
+/* HEADER */
+
+.nav_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+}
+
 .logo {
     max-width: 100%;
     height: auto;
@@ -63,8 +76,12 @@ body {
     text-decoration: none;
     color: var(--primary-color-blue);
     font-size: var(--fs-18);
-    font-family:  "DM Sans", sans-serif;
+    font-family: "DM Sans", sans-serif;
     font-weight: 500;
+}
+
+li a:hover {
+    color: hsl(85, 88%, 43%);
 }
 
 
@@ -77,16 +94,53 @@ body {
     }
 }
 
-@media (max-width: 23.4em) {
+@media (max-width: 24.5em) {
 
     .menu {
         display: none;
+        text-align: center;
+        width: 92%;
+        position: absolute;
+        padding: 0;
+        top: 50px;
     }
+
+    .menu a {
+        display: block;
+        font-size: 1.5rem;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(203, 100%, 13%);
+        color: var(--secondary-color-white);
+        padding: 1rem 0;
+    }
+
+    .menu a:hover {
+        background-color: hsl(85, 88%, 43%);
+    }
+
+    .active {
+        display: block;
+    }
+
+    .main-nav {
+        gap: 17rem;
+    }
+
+    .main-nav .hamburger {
+        display: block;
+        cursor: pointer;
+
+    }
+
+    .hamburger .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: var(--secondary-color-black);
+    }
+
 }
-
-
-
-
-
-
-/* HEADER */
