@@ -29,6 +29,16 @@ html {
     box-sizing: inherit;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     margin: 0;
     font-family: "DM Sans", sans-serif;
@@ -54,11 +64,6 @@ body {
 .hamburger {
     display: none;
 }
-
-/* .logo {
-    max-width: 100%;
-    height: auto;
-} */
 
 .main-nav {
     display: flex;
@@ -90,6 +95,49 @@ body {
     display: none;
 }
 
+
+/* HERO */
+h1 {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-size: var(--fs-65);
+    font-weight: 700;
+    color: var(--primary-color-blue);
+}
+h1 .text2 {
+    color: var(--primary-color-green);
+}
+.hero_container {
+    height: 608px;
+    outline: auto;
+    display: flex;
+    flex-direction: start;
+    justify-content: start;
+}
+
+.hero_container .cta1_btn, .hero_container .cta2_btn {
+    text-decoration: none;
+    color: var(--primary-color-blue);
+    font-size: var(--fs-18);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    border: 2px solid var(--primary-color-blue);
+    border-radius: 10px;
+    padding: 0.8rem 1.5rem;
+    transition: color 0.1s ease-in-out;
+    position: relative;
+    bottom: 0;
+}
+
+.hero_container .cta1_btn {
+    background-color: var(--primary-color-blue);
+    color: var(--secondary-color-white);
+}
+
+.hero_container .cta1_btn:hover, .hero_container .cta2_btn:hover {
+    color: var(--primary-color-green);
+}
 
 
 
@@ -178,4 +226,18 @@ body {
         background-color: var(--secondary-color-black);
     }
 
+
+    /* HERO */
+
+    .hero_container {
+        display: block;
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    .hero_container h1, .hero_container picture {
+        font-size: var(--fs-37);
+    }
+    
+    
 }
