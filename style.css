@@ -97,7 +97,7 @@ body {
 
 
 /* HERO */
-h1 {
+.hero__heading1 {
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -105,15 +105,14 @@ h1 {
     font-weight: 700;
     color: var(--primary-color-blue);
 }
-h1 .text2 {
+.hero__heading1 .hero__heading3 {
     color: var(--primary-color-green);
 }
 .hero_container {
     height: 608px;
     outline: auto;
-    display: flex;
-    flex-direction: start;
-    justify-content: start;
+    align-content: center;
+    position: relative;
 }
 
 .hero_container .cta1_btn, .hero_container .cta2_btn {
@@ -139,6 +138,11 @@ h1 .text2 {
     color: var(--primary-color-green);
 }
 
+.hero__image svg{
+    position: absolute;
+    right:0;
+    bottom: 0;
+}
 
 
 /* tablet */
@@ -152,18 +156,32 @@ h1 .text2 {
     .outcome__logo__banner, .close_btn{
         display: none;
     }
+
+    /* HERO */
+
+    .hero_container {
+        align-items: center;
+    }
+
+    
+
+
+    /* h1 {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        font-size: var(--fs-50);
+        font-weight: 700;
+        color: var(--primary-color-blue);
+    } */
+
+    /* .cta {
+        margin: auto;
+    } */
 }
 
 @media (max-width: 23.5em) {
-
-    /* .menu {
-        display: none;
-        text-align: center;
-        width: 92%;
-        position: absolute;
-        padding: 0;
-        top: 50px;
-    } */
+   
      .menu {
         display: none;
      }
@@ -235,9 +253,19 @@ h1 .text2 {
         text-align: center;
     }
 
-    .hero_container h1, .hero_container picture {
+    .hero_container .hero__heading1 {
         font-size: var(--fs-37);
     }
+
+    .cta__buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
     
+    .hero__image svg {
+        display: none;
+    }
     
 }
