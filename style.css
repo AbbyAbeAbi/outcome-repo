@@ -160,6 +160,30 @@ body {
 
 }
 
+
+/* PURPOSE */
+.purpose_container {
+    background-color: var(--primary-color-blue);
+    color: var(--secondary-color-white);
+}
+
+.purpose__heading {
+    font-size: var(--fs-64);
+    font-weight: 700;
+    color: var(--secondary-color-white);
+    width: 477px;
+    height: 140;
+}
+
+.purpose_container p {
+    width: 561px;
+    height: 243px;
+}
+
+.purpose__heading span {
+    color: var(--primary-color-green);
+}
+
 /* tablet */
 @media (min-width: 37.5em) {
 
