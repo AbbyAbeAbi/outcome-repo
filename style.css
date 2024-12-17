@@ -30,6 +30,8 @@ html {
     box-sizing: inherit;
 }
 
+p,
+br,
 h1,
 h2,
 h3,
@@ -162,9 +164,17 @@ body {
 
 
 /* PURPOSE */
-.purpose_container {
+.purpose {
     background-color: var(--primary-color-blue);
     color: var(--secondary-color-white);
+    height: 467px;
+}
+
+.purpose_container {
+    display: flex;
+    gap: 114px;
+    align-items: center;
+    padding: 112px 0;
 }
 
 .purpose__heading {
@@ -175,13 +185,18 @@ body {
     height: 140;
 }
 
-.purpose_container p {
-    width: 561px;
-    height: 243px;
-}
-
 .purpose__heading span {
     color: var(--primary-color-green);
+}
+
+.heading_con {
+    width: 450px;
+    height: 140px;
+}
+
+.para_con {
+    width: 561px;
+    height: 243px;
 }
 
 /* tablet */
