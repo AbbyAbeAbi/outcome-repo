@@ -168,15 +168,6 @@ body {
     background-color: var(--primary-color-blue);
     color: var(--secondary-color-white);
     min-height: 467px;
-    outline: 1px solid red;
-
-}
-
-.purpose_container {
-    /* display: flex;
-    gap: 114px;
-    align-items: center;
-    padding: 112px 0; */
 }
 
 .purpose__heading {
@@ -191,23 +182,10 @@ body {
     color: var(--primary-color-green);
 }
 
-
-
-.heading_con {
-    width: 450px;
-    height: 140px;
-}
-
-.para_con {
-    width: 561px;
-    height: 243px;
-}
-
 .flex-title {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    outline: 1px solid orange;
     min-height: 467px;
 }
 
@@ -220,17 +198,13 @@ body {
 .flex-title .title-note {
     font-size: var(--fs-18);
     font-weight: 400;
-    outline: 1px solid red;
 }
 
 .flex-title .title-main {
     flex-grow: 1;
     width: 450px;
     height: 140px;
-    outline: 1px solid green;
-    padding: 112px 142px 112px 0;
-    font-size: var(--fs-50);
-    text-align: center;
+    font-size: var(--fs-64);
 
 }
 
