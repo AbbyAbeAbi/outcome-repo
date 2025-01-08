@@ -92,7 +92,7 @@ nav ul a:hover {
 }
 
 .container {
-    height: 608px;
+    /* height: 608px; */
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -127,6 +127,11 @@ button {
     margin: 8px;
 }
 
+button:nth-child(3) {
+    background-color: var(--secondary-color-white);
+    color: var(--primary-color-blue);
+}
+
 button:hover {
     color: var(--primary-color-green);
     transition: color 0.1s ease-in-out;
@@ -136,93 +141,14 @@ button:hover {
 .container picture {
     position: relative;
     right: -90px;
+    bottom: -6px;
 }
 
 .hamburger {
     display: none;
 }
 
-@media (max-width: 860px) {
-    .container {
-        margin-top: 10px;
-        flex-direction: column;
-    }
 
-    .hero-text h1 {
-        width: 100%;
-    }
-
-    .container picture svg {
-        width: 100%;
-        max-width: 373px;
-        height: auto;
-    }
-
-    .container picture {
-        right: 0;
-    }
-
-    .hero-text {
-        text-align: center;
-    }
-
-    button {
-        padding: 12px 16px;
-        margin: 12px;
-    }
-
-    /* PURPOSE */
-    .purpose_container {
-        text-align: center;
-    }
-
-}
-
-
-@media (max-width: 600px) {
-    .container picture {
-        right: 0;
-    }
-
-    .hero-text {
-        text-align: center;
-    }
-
-    .container picture svg {
-        width: 100%;
-        max-width: 394px;
-        height: auto;
-    }
-
-    nav ul a {
-        display: none;
-    }
-
-    .hamburger {
-        display: block;
-    }
-}
-
-
-@media (max-width: 375px) {
-    .container picture {
-        right: 0;
-    }
-
-    .hero-text {
-        text-align: center;
-    }
-
-    .container button {
-        padding: 12px 16px;
-    }
-
-    .container picture svg {
-        width: 100%;
-        max-width: 286px;
-        height: auto;
-    }
-}
 
 /* HERO */
 .hero__heading1 {
@@ -240,7 +166,7 @@ button:hover {
 }
 
 .hero_container {
-    height: 608px;
+    /* height: 608px; */
     align-content: center;
     position: relative;
 }
@@ -290,7 +216,7 @@ button:hover {
 .purpose {
     background-color: var(--primary-color-blue);
     color: var(--secondary-color-white);
-    min-height: 467px;
+    /* min-height: 467px; */
 }
 
 .flex-title {
@@ -323,11 +249,8 @@ button:hover {
     color: var(--primary-color-green);
 }
 
+
 /* SOLUTION */
-.solution_container {
-    outline: 1px solid red;
-    max-height: 1386px;
-}
 
 .solution_container .title-main {
     color: var(--primary-color-blue);
@@ -337,21 +260,27 @@ button:hover {
 .flex-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    /* justify-content: center; */
+    align-items: stretch;
     flex-wrap: wrap;
 }
 
 .flex-container .element {
     width: 360px;
     height: auto;
-    outline: 1px solid var(--primary-color-blue);
-    /* text-align: center; */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* font-size: clamp(1.3rem, 0.19vi + 1.3rem, 1.5rem); */
     flex-direction: column;
+    position:relative;
+}
+
+.flex-container .element img {
+    position: absolute;
+    top: 0;
+}
+
+.flex-container .element .invisible {
+    height: 360px;
 }
 
 .flex-container .text-container .title-main span {
@@ -364,7 +293,8 @@ button:hover {
 }
 
 .flex-container .text-container {
-    padding: 10px
+    padding: 20px;
+    font-size: clamp(1rem, 0.19vi + 0.96rem, 1.13rem);
 }
 
 .flex-container .element img {
@@ -377,7 +307,7 @@ button:hover {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    min-height: 467px;
+    min-height: 370px;
 }
 
 .flex-solution-title .title-main {
@@ -390,6 +320,156 @@ button:hover {
     color: var(--primary-color-green);
 }
 
+/* SKILLS */
+
+.skills {
+    background-color: var(--primary-color-blue);
+    color: var(--secondary-color-white);
+}
+
+.flex-skills-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 467px;
+    gap:8em;
+}
+
+.flex-skills-container>span {
+    white-space: wrap;
+    width: 561px;
+    /* height: 243px; */
+}
+
+.flex-skills-container .skills-title-note {
+    font-size: clamp(1rem, 0.75vi + 0.82rem, 1.5rem);
+    font-weight: 400;
+    width: 585px;
+}
+
+.flex-skills-container .skills-title-note ul li span {
+    color: var(--primary-color-green);
+}
+
+.flex-skills-container .skills-title-note ul li {
+    line-height: 1.8em;
+}
+
+.flex-skills-container .skills-title-main {
+    flex-grow: 1;
+    width: 110px;
+    /* height: 140px; */
+    font-size: clamp(2rem, 3vi + 1.3rem, 4rem);
+
+}
+
+.flex-skills-container .skills-title-main span {
+    color: var(--primary-color-green);
+}
+
+@media (max-width: 860px) {
+    .container {
+        margin-top: 10px;
+        flex-direction: column;
+    }
+
+    .hero-text h1 {
+        width: 100%;
+    }
+
+    .container picture svg {
+        width: 100%;
+        max-width: 373px;
+        height: auto;
+    }
+
+    .container picture {
+        right: 0;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    button {
+        padding: 12px 16px;
+        margin: 12px;
+    }
+
+    
+
+    /* PURPOSE */
+    .purpose_container {
+        text-align: center;
+    }
+    /* Skills */
+    .skills_container {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .flex-container {
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .container picture {
+        right: 0;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .container picture svg {
+        width: 100%;
+        max-width: 394px;
+        height: auto;
+    }
+
+    nav ul a {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    
+
+}
+
+
+@media (max-width: 375px) {
+    .container picture {
+        right: 0;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .container button {
+        padding: 12px 16px;
+    }
+
+    .container picture svg {
+        width: 100%;
+        max-width: 286px;
+        height: auto;
+    }
+
+    /* SKILLS */
+    .flex-skills-container, .skills-title-main, .skills-title-note {
+        text-align: center;
+    }
+    .flex-skills-container {
+        gap:0;
+    }
+}
 
 /* tablet */
 @media (min-width: 37.5em) {
@@ -403,6 +483,8 @@ button:hover {
     .close_btn {
         display: none;
     }
+
+    
 
 }
 
@@ -474,5 +556,8 @@ button:hover {
         transition: all 0.3s ease-in-out;
         background-color: var(--secondary-color-black);
     }
+
+
+    
 
 }
